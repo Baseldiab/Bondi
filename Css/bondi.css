@@ -1,0 +1,138 @@
+:root {
+    --dark-color: #19283f;
+    --main-color: #0DCAF0;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    margin: 0;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+/*  SRART COMPONENT */
+.main-head p::after{
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    width: 13%;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+
+}
+/*  END COMPONENT */
+
+/* START HEADER */
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .container ul li{
+    transition: 0.4s;
+    width: fit-content;
+}
+.navbar .container ul li:hover{
+    padding: 0 15px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+/* END HEADER */
+
+
+/* START LANDING  */
+.landing{
+    background-color: var(--dark-color);
+    height: calc(100vh - 76px);
+}
+/* END LANDING  */
+
+/* START OUR WORK */
+.our-work{
+    background-color: var(--section-color);
+
+
+}
+.our-work .container ul li:hover{
+    padding: 0 15px;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+.our-work .container .gallery{
+    position: relative;
+}
+
+.our-work .container .gallery::after{
+    content: attr(data-work);
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    background-color: #0dcaf0ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    z-index: -1;
+    transition: 0.3s;
+}
+@keyframes image {
+    from{ z-index: 1; width: 0; height: 0;}
+    to{ z-index: 100; width: 98%; height: 96%;}
+    
+}
+.our-work .container .gallery:hover::after{
+    animation: image 0.3s linear forwards;
+}
+/* END OUR WORK */
+
+/* START TEAM */
+.team{
+    background-color: var(--section-color);
+}
+/* END TEAM */
+
+/*  START PROJECT */
+
+.project{
+    background-color: var(--dark-color);
+}
+
+/*  END PROJECT */
+
+/* SART SUBSCRIBE */
+.subscribe{
+    background-color: var(--yellow-color);
+}
+
+.subscribe input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .subscribe input[type="email"]:focus {
+    outline: none;
+  }
+  .subscribe ::placeholder {
+    color: white;
+  }
+
+.subscribe-bbtn{
+    background-color: var(--dark-color);
+}
+/* END SUBSCRIBE */
+
+/*  START FOOTER */
+
+.footer{
+    background-color: var(--dark-color);
+}
+/*  END FOOTER */
